@@ -104,7 +104,7 @@ class SIFTTemplateMatcher():
 		return cv2.perspectiveTransform(input_pts,self.last_homography_matrix)
 
 
-def process_video(map_image,query_video_path, yolo_output_dir = r'C:\Users\W\Desktop\dev\yolov5\inference\output', downsample_rate = 1):
+def process_video(map_image,query_video_path, yolo_output_dir, downsample_rate = 1):
 	print('Initializing SIFTTemplateMatcher')
 	stm = SIFTTemplateMatcher(map_image)
 	print('Initializing VideoLoader')
@@ -210,6 +210,7 @@ if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--map-img', type=str, default='map_images/the_skeld.png', help='path to the map image')
 	parser.add_argument('--video', type=str, default='videos/Skeld With Tasks.mp4', help='path to video to run player tracker on')  # file/folder, 0 for webcam
+	parser.add_argument('--yolo-output', type=str, default = r'C:\Users\W\Desktop\dev\yolov5\inference\output', help = 'path to yolo output')
 	parser.add_argument('--query-image',type=str, default=None, help='for single image testing, overrides video input, intended for debugging/demo')
 
 	opt = parser.parse_args()
@@ -221,7 +222,7 @@ if __name__ == '__main__':
 
 	if opt.query_image is None:
 		query_video_path = opt.video
-		process_video(map_image,query_video_path)
+		process_video(map_image,query_video_path, opt.yolo_output)
 	else:
 		#process single image
 		query_image = cv2.imread(opt.query_image)

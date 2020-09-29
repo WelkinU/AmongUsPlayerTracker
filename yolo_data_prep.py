@@ -47,10 +47,10 @@ def data_prep(data_dir, outdir, copy_images = True):
 if __name__ == '__main__':
 
 	parser = argparse.ArgumentParser()
-    parser.add_argument('--data', type=str, default='./data', help='path with the jpg images and json files from labelme')
-    parser.add_argument('--out', type=str, default='./data_darknet_format', help='data to output darknet format labels')  # file/folder, 0 for webcam
+	parser.add_argument('--data', type=str, default='./data', help='path with the jpg images and json files from labelme')
+	parser.add_argument('--out', type=str, default='./data_darknet_format', help='data to output darknet format labels')  # file/folder, 0 for webcam
 
 	opt = parser.parse_args()
-    print(opt)
+	print(opt)
 
 	data_prep(opt.data,opt.out)

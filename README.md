@@ -9,7 +9,7 @@ This repo works in combination with the Ultralytics YOLOv5 repository. Clone it 
 - The green lines represent feature matches
 - The blue rectangle represents where SIFT thinks the player's camera is located on the map
 - The colored dots represet YOLOv5 detections plotted on the map
-<a href="https://www.youtube.com/watch?v=ywalGN4IPnk"><img src="https://user-images.githubusercontent.com/47000850/94502531-5d98ff80-01d2-11eb-974a-36d63b9dba7e.png" alt="image" width="630" /></a>
+<a href="https://www.youtube.com/watch?v=ywalGN4IPnk"><img src="https://user-images.githubusercontent.com/47000850/94505551-54f7f780-01d9-11eb-992b-845050a898b8.png" alt="image" width="630" /></a>
 
 ### Running the Player Tracker
 This is still a little rough right now - it's a two step process.

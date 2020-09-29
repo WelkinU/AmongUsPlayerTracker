@@ -1,0 +1,6 @@
+data/*
+data_darknet_format/images/*
+data_darknet_format/images_superset/*
+data_darknet_format/labels/*
+videos/*
+test_images/*

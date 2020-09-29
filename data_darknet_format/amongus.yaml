@@ -1,0 +1,16 @@
+train: C:\Users\W\Desktop\dev\AmongUsPlayerTracker\data_darknet_format\images\train
+val: C:\Users\W\Desktop\dev\AmongUsPlayerTracker\data_darknet_format\images\train
+nc: 12
+names:
+- black
+- blue
+- brown
+- cyan
+- green
+- lime
+- orange
+- pink
+- purple
+- red
+- white
+- yellow

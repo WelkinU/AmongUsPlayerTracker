@@ -20,6 +20,20 @@ This is still a little rough right now - it's a two step process.
 `python sift_template_matcher.py --map-img "map_images/the_skeld.png" --video "PATH/TO/YOUR/VIDEO.mp4" --yolo-output "yolov5\inference\output"`
 
 ---------------------------------------------------------------------------------------------------------------
+## Results So Far
+
+### SIFT Algorithm Performance
+SIFT matching is working pretty well when combined with some constraints on results. As you can see in the video above, it loses tracking when the player brings up the menus or does tasks, but otherwise tracks the player's camera perfectly.
+
+### YOLOv5s Algorithm Performance
+This algorithm works extremely well in normal circumstances but has trouble in the following scenarios:
+- The lights are sabotaged: When the lights are turned off, the player's color RGB values change, often causing the model to detect the wrong color.
+- The reactor/oxygen is sabotaged: The flashing red light again often causes the model to detect the wrong color
+- Many players are stacked on top of each other. This really hard for a human to see anyway....
+
+The lights/reactor/oxygen issues might be solved with a data augmentation model that could accurately represent the color changing effects, or simply more data. This assumes of course that the YOLOv5s model has the capability to handle these cases. The stacking issue seems pretty hard to solve, but in practice might not be necessary, because you could track the players before/after they entered the stack?
+
+---------------------------------------------------------------------------------------------------------------
 ## YOLOv5 Training
 
 ### Data Prep

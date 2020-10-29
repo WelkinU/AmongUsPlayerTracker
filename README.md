@@ -26,8 +26,10 @@ This is still a little rough right now - it's a two step process.
 SIFT matching is working pretty well when combined with some constraints on results. As you can see in the video above, it loses tracking when the player brings up the menus or does tasks, but otherwise tracks the player's camera perfectly.
 
 ### YOLOv5s Algorithm Performance
-This algorithm works extremely well in normal circumstances but has trouble in the following scenarios:
-- The lights are sabotaged: When the lights are turned off, the player's color RGB values change, often causing the model to detect the wrong color.
+<a href="https://www.youtube.com/watch?v=YTa7p3nw6ZQ"><img src="https://user-images.githubusercontent.com/47000850/97640645-9a495800-1a17-11eb-9c99-ad67d4d9ceb0.png" alt="image" width="700" /></a>
+
+This algorithm works pretty well in normal circumstances but has trouble in the following scenarios:
+- The lights are sabotaged: When the lights are turned off, the player's color RGB values change, often causing the model to detect the wrong color. This also happens sometimes if a detection is on the edge of the player's vision.
 - The reactor/oxygen is sabotaged: The flashing red light again often causes the model to detect the wrong color
 - Many players are stacked on top of each other. This really hard for a human to see anyway....
 
